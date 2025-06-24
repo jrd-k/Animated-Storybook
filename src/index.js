@@ -24,3 +24,16 @@ function displayPages() {
     });
 }
 
+function showPageDetail(page) {
+  const detail = document.getElementById("page-detail");
+  detail.innerHTML = `
+    <h2>${page.title}</h2>
+    <img src="${page.image}" />
+    <p>${page.content}</p>
+    <button onclick="editPage(${page.id})">Edit</button>
+    <button onclick="deletePage(${page.id})">Delete</button>
+  `;
+
+  detail.dataset.currentId = page.id;
+}
+
