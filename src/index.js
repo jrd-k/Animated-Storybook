@@ -37,3 +37,25 @@ function showPageDetail(page) {
   detail.dataset.currentId = page.id;
 }
 
+function setupNewPageForm() {
+  const form = document.getElementById("new-page-form");
+  form.addEventListener("submit", e => {
+    e.preventDefault();
+    const newPage = {
+      title: form.title.value,
+      image: form.image.value,
+      content: form.content.value
+    };
+
+    fetch(BASE_URL, {
+      method: "POST",
+      headers: { "Content-Type": "application/json" },
+      body: JSON.stringify(newPage)
+    })
+      .then(res => res.json())
+      .then(() => {
+        displayPages();
+        form.reset();
+      });
+  });
+}
