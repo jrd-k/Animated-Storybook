@@ -173,3 +173,32 @@ body.dark-mode button {
 body.dark-mode button:hover {
   background-color: #888;
 }
+.page-wrapper {
+  display: flex;
+  gap: 1.5rem;
+  align-items: flex-start;
+  margin-top: 1rem;
+}
+
+.page-image {
+  width: 45%;
+  max-height: 500px;
+  object-fit: cover;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0,0,0,0.2);
+}
+
+.page-text {
+  flex: 1;
+}
+
+.page-text h2 {
+  margin-top: 0;
+  font-size: 2rem;
+}
+
+.page-text p {
+  font-size: 1.1rem;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
