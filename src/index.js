@@ -27,13 +27,16 @@ function displayPages() {
 function showPageDetail(page) {
   const detail = document.getElementById("page-detail");
   detail.innerHTML = `
-    <h2>${page.title}</h2>
-    <img src="${page.image}" />
-    <p>${page.content}</p>
-    <button onclick="editPage(${page.id})">Edit</button>
-    <button onclick="deletePage(${page.id})">Delete</button>
+    <div class="page-wrapper">
+      <img src="${page.image}" alt="${page.title}" class="page-image" />
+      <div class="page-text">
+        <h2>${page.title}</h2>
+        <p>${page.content}</p>
+        <button onclick="editPage(${page.id})">Edit</button>
+        <button onclick="deletePage(${page.id})">Delete</button>
+      </div>
+    </div>
   `;
-
   detail.dataset.currentId = page.id;
 }
 
