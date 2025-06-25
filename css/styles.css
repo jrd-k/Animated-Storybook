@@ -202,3 +202,23 @@ body.dark-mode button:hover {
   line-height: 1.6;
   margin-bottom: 1rem;
 }
+body.dark {
+  background-color: #121212;
+  color: #f0f0f0;
+}
+
+body.dark input,
+body.dark textarea,
+body.dark button {
+  background-color: #333;
+  color: #fff;
+  border: 1px solid #444;
+}
+
+body.dark #sidebar {
+  background-color: #1e1e1e;
+}
+
+body.dark img {
+  border: 2px solid #444;
+}
