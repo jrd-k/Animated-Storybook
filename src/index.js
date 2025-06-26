@@ -1,4 +1,4 @@
-const BASE_URL = "https://json-server-jara.onrender.com";
+const BASE_URL = "https://json-server-jara.onrender.com/pages";
 
 document.addEventListener("DOMContentLoaded", main);
 
